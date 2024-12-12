@@ -1,0 +1,164 @@
+/* Estilo Geral do Formulário */
+.form {
+  background-color: #2a2a30; /* Fundo escuro */
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 29.81rem;
+  height: auto;
+  color: var(--content-primary, #ffffff);
+  font-family: var(--font-Inter, Arial, sans-serif);
+}
+
+/* Estilo do Cabeçalho */
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+header p {
+  font-size: 0.9rem;
+  color: #b0b0b5;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.label {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-bottom: 5px;
+  display: block; /* Alinha os labels em cima dos inputs */
+}
+
+/* Estilo da Div Input */
+.form-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #555;
+  border-radius: 0.5rem;
+  width: 24.81rem;
+  height: 3rem;
+  margin-bottom: 0.93rem;
+  gap: 0.5rem;
+}
+
+.form-input i {
+  margin-right: 10px;
+  margin-block: 0.75rem;
+  margin-inline: 0.75rem;
+}
+
+.form-input img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Input Fields */
+.form-input input {
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 5px 0;
+  width: 24.81rem;
+  height: 3rem;
+}
+
+
+select{
+  appearance: none;
+  --webkit-appearance: none;
+  --moz-appearance: none;
+  background: url('../assets/Icon.svg') no-repeat right center;
+  background-size: 16px; 
+  width: 100%;
+  cursor: pointer;
+  color: var(--content-secondary);
+  border: 1px solid #2a2a30;
+  font-size: 0.9rem;
+}
+
+select:hover{
+  border: 1px solid #2a2a30;
+}
+
+.input select::-ms-expand {
+  display: none;
+}
+ 
+
+.form-input input:focus {
+  outline: none;
+  border-bottom: 2px solid #6c63ff; /* Realce no foco */
+}
+
+.form-input input::placeholder {
+  color: #b0b0b5; /* Placeholder suave */
+}
+
+/* Linha Pontilhada (opcional para descrição) */
+.dashed-line {
+  border-top: 1px dashed #6c63ff;
+  margin-top: 5px;
+}
+
+/* Estilo para Data e Hora */
+.data-hours {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.data-group {
+  flex: 1;
+}
+
+.data-group .input {
+  margin-bottom: 0;
+  width: 11.87rem;
+}
+
+/* Botão de Agendar */
+.btn-schedule {
+  background-color: #6c63ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-schedule:hover {
+  background-color: #5a54d1;
+}
+
+option .hour-unavailable {
+  cursor: not-allowed; 
+}
+
+
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+  .form {
+    width: 90%;
+    padding: 15px 20px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .btn-schedule {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

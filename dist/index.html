@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+
+    <title>Agendify</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./src/assets/logo.svg" alt="logo" class="logo">
+            <span>Agendify</span>
+        </div>
+
+        <form class="form none">
+           
+            <header>
+              <h1>Agende um atendimento</h1>
+              <p>Preencha os dados do cliente para realizar o agendamento:</p>
+            </header>
+          
+            
+            <label for="nome" class="label">Nome</label>
+            <div class="input">
+              <i><img src="./src/assets/User--Streamline-Solar.svg" alt="Ícone de usuário"></i>
+              <input type="text" id="nome" name="nome" placeholder="Carlos" required>
+            </div>
+          
+           
+            <label for="phone" class="label">Telefone</label>
+            <div class="input">
+              <i><img src="./src/assets/Phone--Streamline-Solar.svg" alt="Ícone de telefone"></i>
+              <input type="tel" id="phone" name="phone" placeholder="(00) 0 0000-0000" required>
+            </div>
+         
+            <label for="descricao" class="label">Motivo da Consulta</label>
+            <div class="input">
+              <input type="text" id="descricao" name="descricao" placeholder="Banho e tosa" required>
+              <div class="dashed-line"></div>
+            </div>
+          
+          
+            <div class="data-hours">
+             
+              <div class="data-group">
+                <label for="data" class="label">Data</label>
+                <div class="input">
+                  <i><img src="./src/assets/Calendar-Minimalistic--Streamline-Solar.svg" alt="Ícone de calendário"></i>
+                  <input type="date" id="data" name="date" required>
+                </div>
+              </div>
+              
+              <div class="data-group">
+                <label for="time" class="label">Hora</label>
+                <div class="input">
+                  <i><img src="./src/assets/Clock-Circle--Streamline-Solar.svg" alt="Ícone de relógio"></i>
+                  <input type="time" id="time" name="time" required>
+                </div>
+              </div>
+            </div>
+          
+            <button type="submit" class="btn-schedule">Agendar</button>
+          </form>
+          
+
+        <aside class="schedule">
+      
+                <header id="header">
+                    <div id="title">
+                        <h1>Sua agenda</h1>
+                        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+                    </div>
+                    
+                    <div class="input">
+                        <i><img src="./src/assets/Calendar-Minimalistic--Streamline-Solar.svg" alt="Calendário"></i>
+                        <input type="date"  id="date" name="date" required />
+                    </div>
+                </header>
+       
+        <div class="list">
+            <section class="schedule-period">
+                <header>
+                    <img src="./src/assets/Sun-Fog--Streamline-Solar.svg" alt="Manhã">
+                    <p>Manhã</p>
+                    <span>09h-12h</span>
+                </header>
+
+                <ul id="period-morning" class="period">
+                    <li>
+                        <p>09:00</p>
+                        <strong>Carlos</strong>
+                        <span>Remoção do siso</span>
+
+                        <button><img src="./src/assets/deletar.svg" alt="Deletar" class="delete-icon"></button>
+                    </li>
+
+                    
+                </ul>
+            </section>
+
+            <section class="schedule-period">
+                <header>
+                    <img src="./src/assets/Cloud-Sun-4--Streamline-Solar.svg" alt="Tarde">
+                    <p>Tarde</p>
+                    <span>09h-12h</span>
+                </header>
+
+                <ul id="period-afternoon" class="period">
+                    <li>
+                        <p>09:00</p>
+                        <strong>Mario</strong>
+                        <span>Consulta</span>
+
+                        <button><img src="./src/assets/deletar.svg" alt="Deletar" class="delete-icon"></button>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="schedule-period">
+                <header>
+                    <img src="./src/assets/Moon-Stars--Streamline-Solar.svg" alt="Noite">
+                    <p>Noite</p>
+                    <span>19h-21h</span>
+                </header>
+
+                <ul id="period-night" class="period">
+                    <li>
+                        <p>20:00</p>
+                        <strong>Mariana</strong>
+                        <span>Implantes dentários</span>
+
+                        <button><img src="./src/assets/deletar.svg" alt="Deletar" class="delete-icon"></button>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        </aside>
+
+        <button class="button ">Novo Agendamento</button>
+    </div>
+</body>
+</html>

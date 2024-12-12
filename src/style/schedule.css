@@ -1,0 +1,204 @@
+.schedule{
+    width: auto;
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-block: 5rem;
+    padding-inline: 5rem;
+   
+}
+
+#header{
+    width: 44rem;
+    height: auto; /* Permite ajuste automático */
+    display: flex;
+    gap: 0.75rem;
+    justify-content: space-between;
+
+    #title{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        h1{
+            color: var(--content-primary);
+            font-family: var(--font-InterTight);
+        }
+    
+        p{
+            color: var(--content-secondary);
+            font-family: var(--font-Inter);
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+    
+}
+
+.input{
+    width: 10.75rem;   
+    height: 3rem;
+    padding-inline: 0.75rem;
+    padding-block: 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: 1px solid  var(--content-brand);
+    border-radius: 0.5rem;
+
+    input{
+        color: var(--content-secondary);
+        background-color: transparent;
+        font-family: var(--font-Inter);
+        border: none;
+        outline: none;
+      
+        
+    }
+
+    ::-webkit-calendar-picker-indicator{
+        cursor: pointer;
+        background: url("../assets/Icon.svg");
+    }
+ 
+}
+
+.list{
+    width: 44rem;
+    height: auto; /* Ajuste dinâmico */
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.schedule-period{
+    background-color: var(--background-tertiary);
+    width: 44rem;
+    height: auto; /* Ajuste dinâmico */
+    border-radius: 0.62rem;
+
+    header{
+        width: 100%;
+        height: 2.75rem;
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        padding-inline: 1.25rem;
+        padding-block: 0.75rem;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: var(--border-primary);
+
+        img{
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        p{
+            font-family: var(--font-Inter);
+            color: var(--content-primary);
+            flex: 1;
+            margin-block: auto;
+        }
+    
+        span{
+            color: var(--content-secondary);
+            font-family: var(--font-Inter);
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+
+    ul{
+        padding-inline: 1.25rem;
+        padding-block: 1.25rem;
+        font-family: var(--font-Inter);
+       
+    }
+
+    li{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 41rem;
+        height: 3rem;
+        gap: 1rem;
+        padding-inline: 0.75rem;
+        color: var(--content-primary);
+    }
+
+   
+
+    span{
+        font-size: 0.75rem;
+        font-weight: bold;
+        color: var(--content-secondary);
+    }
+    
+    img{
+        width: 1.56rem;
+        height: 1.56rem;
+    }
+
+    button{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    
+}
+
+.button{
+    width: 13.62rem;
+    height: 3rem;
+    padding-inline: 1.5rem;
+    padding-block: 1.3rem;
+    border-radius: 0.5rem;
+    margin-top: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-brand);
+    cursor: pointer;
+    color: var(--background-primary);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.button:hover{
+    background-color: var(--background-highlights);
+}
+
+.none{
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .schedule {
+      grid-area: schedule;
+      padding: 1.5rem;
+    }
+  
+    #header{
+        width: 21.87rem;
+
+    }   
+
+    .list{
+        width: 21.87rem;
+    }
+
+    .schedule-period{
+        width: 21.87rem;
+    }
+
+    .button{
+        width: 13.62rem;
+        margin: auto;
+    }
+}
+  
