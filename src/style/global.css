@@ -31,16 +31,11 @@
     --font-InterTight: "Inter tight";
     --font-Inter: "Inter";
 
-
+    font-size: 16px
 }
 
 .container{
-    display: grid;
-    grid-template-columns: auto 1fr;
     padding: 0.75rem;
-    width: auto;
-    height: auto;
-    padding-block: auto;
 }
 
 body{
@@ -49,31 +44,34 @@ body{
 
 
 .logo{
-    width: 9.56rem;
-    height: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: var(--background-tertiary);
-    display: flex;
-    gap: 1.25rem;
-    margin: -0.75rem;
-
+    padding: 0.75rem 1.25rem;
     border-bottom-right-radius: 0.75rem;
+    height: 3.75rem;
+    width: 8.7rem;
+    display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.25rem;
 
     img{
-        width: 24px;
-        height: 24px;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
-    span{
-        color: var(--background-brand);
-        font-family: var(--font-Inter);
-        font-size: 16px;
-        font-weight: bold;
-    }
 }
 
-@media (max-width: 400px) {
+.logo span{
+    color: var(--background-brand);
+    font-family: var(--font-Inter);
+    font-weight: bold;
+    font-size: 1rem;
+} 
+
+@media (max-width: 1100px) {
 
     :root{
         font-size: 14px;
@@ -82,6 +80,7 @@ body{
     .container{
         display: flex;
         flex-direction: column;
+        height: auto;
     }
-    
+
 }
