@@ -109,8 +109,9 @@
     display: none;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .schedule{
+    max-width: 100%;
     padding: 1.5rem;
   }
 
